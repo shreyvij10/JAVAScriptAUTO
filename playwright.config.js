@@ -1,28 +1,27 @@
-// @ts-check
-import { defineConfig, devices } from '@playwright/test';
+// @ts-check // Enable TypeScript checking for this JavaScript file
 
 /**
- * @see https://playwright.dev/docs/test-configuration
+ * @see https://playwright.dev/docs/test-configuration // Reference to Playwright documentation for configuration
  */
-const config=({
-  testDir: './tests',
-  testMatch: ['**/*.js', '**/*.spec.js'],
+const config=({ // Define the configuration object for Playwright tests
+  testDir: './tests', // Specify the directory where test files are located
+  testMatch: ['**/*.js', '**/*.spec.js'], // Patterns to match test files (includes .js and .spec.js files)
 
-  // Default timeout for each test
-  timeout: 40 * 1000,
+  // Default timeout for each test // Comment indicating timeout setting
+  timeout: 40 * 1000, // Set the default timeout for tests to 40 seconds
 
-  // Expect timeout
-  expect: {
-    timeout: 40 * 1000,
+  // Expect timeout // Comment indicating expect timeout
+  expect: { // Configure expectations
+    timeout: 40 * 1000, // Set the timeout for expect assertions to 40 seconds
   },
 
-  // Reporter
-  reporter: 'html',
+  // Reporter // Comment indicating reporter setting
+  reporter: 'html', // Use HTML reporter for test results
 
-  // Shared settings for all projects
-  use: {
-    browserName: 'chromium',
-    headless: true,
+  // Shared settings for all projects // Comment indicating shared use settings
+  use: { // Configure shared browser settings
+    browserName: 'chromium', // Use Chromium browser
+    headless: true, // Run tests in headless mode (no UI)
   },
-});
-module.exports = config;
+}); // End of config object
+module.exports = config; // Export the config object as a CommonJS module

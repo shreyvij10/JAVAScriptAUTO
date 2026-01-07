@@ -20,5 +20,5 @@ test.only('UI Controls', async ({ browser }) => { // Define a test named 'UI Con
     await expect(page.locator("#terms")).toBeChecked(); // Assert that the terms checkbox is checked
     await page.locator("#terms").uncheck(); // Uncheck the terms checkbox
     expect(await page.locator("#terms").isChecked()).toBeFalsy(); // Assert that the terms checkbox is not checked (falsy)
-
+    
 }); // End of the test function

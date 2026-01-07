@@ -1,5 +1,5 @@
 const {test,expect} = require('@playwright/test'); // Import test and expect from Playwright for writing and asserting tests
-test.only('Login page Practice', async ({browser})=> // Define a test named 'Login page Practice' that runs only this test, using browser context
+test('Login page Practice', async ({browser})=> // Define a test named 'Login page Practice' that runs only this test, using browser context
 { // Start of test function
     const context = await browser.newContext(); // Create a new browser context for isolation
     const page =  await context.newPage(); // Create a new page in the context

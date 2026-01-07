@@ -3,7 +3,7 @@ const { test, expect } = require('@playwright/test'); // Import test and expect 
 
 
 //if you want to run only this test and ignore others use 'only' // Comment explaining test.only usage
-test.only('Web Client loginPage Playwright Test', async ({ page }) => { // Define a test named 'Web Client loginPage Playwright Test' that runs only this test, using page fixture
+test('Web Client loginPage Playwright Test', async ({ page }) => { // Define a test named 'Web Client loginPage Playwright Test' that runs only this test, using page fixture
         await page.goto("https://rahulshettyacademy.com/client/#/auth/login"); // Navigate to the login page URL
         //email login step // Comment indicating email filling step
         await page.locator("#userEmail").fill("shreyashish1101@gmail.com"); // Fill the email input field with the specified email
