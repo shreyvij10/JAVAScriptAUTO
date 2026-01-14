@@ -11,7 +11,7 @@ test('Web Client loginPage Playwright Test', async ({ page }) => { // Define a t
     await page.locator("#userPassword").fill("800386@As"); // Fill the password input field with the password
     await page.locator("[value='Login']").click(); // Click the login button by its value attribute
     await page.waitForLoadState('networkidle'); // Wait for the page to finish loading all network requests
-    //await page.locator(".card-body b").first().waitFor(); // Commented out: Wait for the first product title element to appear
+    await page.locator(".card-body b").first().waitFor(); // Commented out: Wait for the first product title element to appear
     const titles = await page.locator(".card-body b").allTextContents(); // Get all text contents of product titles (b tags inside .card-body) into an array
     console.log(titles); // Log the array of product titles to the console
     const count = await products.count(); // Get the count of product elements
@@ -22,7 +22,7 @@ test('Web Client loginPage Playwright Test', async ({ page }) => { // Define a t
             break; // Exit the loop once the product is added
         }
     }
-    //await page.pause(); // Commented out: Pause the test for manual inspection
+    await page.pause(); // Commented out: Pause the test for manual inspection
     await page.locator("[routerlink*='cart']").click(); // Click the cart link by partial routerlink attribute
     //await page.pause(); // Commented out: Pause the test for manual inspection
 

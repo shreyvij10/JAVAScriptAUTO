@@ -21,7 +21,10 @@ const config=({ // Define the configuration object for Playwright tests
   // Shared settings for all projects // Comment indicating shared use settings
   use: { // Configure shared browser settings
     browserName: 'chromium', // Use Chromium browser
-    headless: true, // Run tests in headless mode (no UI)
+    headless: false, // Run tests in headless mode (no UI)
+    screenshot: 'only-on-failure', // Capture screenshots only on test failures
+    //video: 'retain-on-failure', // Retain video recordings only on test failures
+    trace: 'retain-on-failure', // Retain trace files only on test failures
   },
 }); // End of config object
 module.exports = config; // Export the config object as a CommonJS module
