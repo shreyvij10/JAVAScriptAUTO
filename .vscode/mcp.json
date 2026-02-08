@@ -1,0 +1,12 @@
+{
+	"servers": {
+		"my-mcp-server-53a2a8a6": {
+			"type": "stdio",
+			"command": "npx",
+			"args": [
+				"@playwright/mcp"
+			]
+		}
+	},
+	"inputs": []
+}
